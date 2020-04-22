@@ -1,0 +1,6 @@
+;; This declare the hello_world executable implemented by hello_world.ml
+
+(executables
+ (modes byte exe)
+ (names program)
+ (libraries core))

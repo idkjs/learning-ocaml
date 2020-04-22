@@ -1,0 +1,13 @@
+;; This declare the hello_world executable implemented by hello_world.ml
+
+(executables
+ (modes byte exe)
+ (names hello_world test_mod)
+ (libraries alcotest))
+
+(rule
+ (alias runtest)
+ (deps
+  (:< test_mod.exe))
+ (action
+  (run %{<})))
